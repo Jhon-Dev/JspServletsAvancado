@@ -27,13 +27,13 @@ public class CapturarExecao extends HttpServlet {
 			String valor = request.getParameter("valorParam");			
 			Integer.parseInt(valor);
 
-			response.setStatus(200);
+			response.setStatus(200);// ok nenhum erro
 			response.getWriter().write("Processada com sucesso");
 
 		} catch (Exception e) {
 
-			response.setStatus(500);
-			response.getWriter().write("Erro ao processar : " + e.getMessage());
+			response.setStatus(500); // erro interno do servidor
+			response.getWriter().write("Erro ao processar : " + e.getMessage()); // adiciona valor ao responseText
 
 		}
 	}

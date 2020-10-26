@@ -24,9 +24,18 @@
 		method : "POST",
 	    url: "capturarExecao",
 	    data: { valorParam: valorInformado }
-    })
-    .always (function(response) {//sempre capta o retorno
-		alert(response);
+    })  
+    .done(function(response) {// resposta ok - nenhum erro
+		alert("Sucesso " + response);
+    
+    //fazer algo
+    
+	})
+    .fail(function(xhr, status, errorThown) { // resposta erro - algum problema ocorreu
+		alert("Error: " + xhr.responseText); // mostra a resposta do servidor
+    
+    // fazer algo se der errado
+    
 	});
     
 }    
