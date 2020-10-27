@@ -8,7 +8,27 @@
 </head>
 <body>
 
-<h1>Autenticar Usuário</h1>
+    <h1>Autenticar Usuário</h1>
+    <form action="ServletAutenticacao" method="post">
+    <table>
+    
+    <tr>
+       <td>Login:</td>
+       <td><input type="text" id="login" name="login"></td>    
+    </tr>
+        <tr>
+       <td>Senha:</td>
+       <td><input type="password" id="senha" name="senha"></td>    
+    </tr>
+    
+        </tr>
+        <tr>
+       <td></td>
+       <td><input type="submit" id="Logar" name="Logar" value="Logar"></td>    
+    </tr>
+    
+    </table>
+    </form>
 
 </body>
 </html>
