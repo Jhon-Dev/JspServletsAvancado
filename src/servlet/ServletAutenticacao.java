@@ -40,6 +40,8 @@ public class ServletAutenticacao extends HttpServlet {
 		
 		String senha = request.getParameter("senha");
 		
+		String url = request.getParameter("url");
+		
 		
 		//nesse momento pode ser feito uma validação no banco de dados		
 		//se o login estiver correto
@@ -55,7 +57,7 @@ public class ServletAutenticacao extends HttpServlet {
 			session.setAttribute("usuario", userLogado);
 			
 			//redireciona para o sistema e autoriza
-	    	RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/acessoAoSistema.jsp");
+	    	RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 	    	dispatcher.forward(request, response);
 		
 		} else { //Se o login falhar

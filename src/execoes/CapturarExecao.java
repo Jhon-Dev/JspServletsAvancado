@@ -15,27 +15,25 @@ public class CapturarExecao extends HttpServlet {
 		super();
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 
 		try {
-
-			String valor = request.getParameter("valorParam");			
+			String valor = request.getParameter("valorParam");
+			
 			Integer.parseInt(valor);
-
+ 
 			response.setStatus(200);// ok nenhum erro
 			response.getWriter().write("Processada com sucesso");
-
 		} catch (Exception e) {
-
-			response.setStatus(500); // erro interno do servidor
-			response.getWriter().write("Erro ao processar : " + e.getMessage()); // adiciona valor ao responseText
-
+			response.setStatus(500);// erro interno do servidor 
+			response.getWriter().write("Erro ao processar : " + e.getMessage()); // adicina valor ao responseText
 		}
+
 	}
 
 }
