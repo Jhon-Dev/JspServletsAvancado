@@ -27,7 +27,14 @@ public class ServletAutenticacao extends HttpServlet {
     
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		if (Boolean.parseBoolean(request.getParameter("deslogar"))) {
+			//adicionar usuário logado a sessão
+			HttpServletRequest req = (HttpServletRequest) request;
+			HttpSession session = req.getSession();
+			session.invalidate();
+			response.sendRedirect("../index.jsp");
+		}
 	}
 
 

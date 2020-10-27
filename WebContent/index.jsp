@@ -18,6 +18,10 @@
 	 <tr>
 	   <td><a href="pages/acessoAoSistema.jsp">Acessar Sistema</a></td>
 	 </tr>	
+	 
+	 	 <tr>
+	   <td><a href="pages/ServletAutenticacao?deslogar=true">Deslogar</a></td>
+	 </tr>	
 	  
 	</table>
 	
